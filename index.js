@@ -90,15 +90,12 @@ document.querySelector('.btnMin1').onclick = function(){
 }
 //b5
 function findLastEven(a){
-    var count = 0;
     for(var i = a.length - 1; i >= 0; i--){
         if(a[i] % 2  == 0){
-            count++;
             return a[i];
         }
     }
-    if(count == 0)
-        return -1;
+    return -1;
 }
 document.querySelector('.btnTim').onclick = function(){
     //input: a[]

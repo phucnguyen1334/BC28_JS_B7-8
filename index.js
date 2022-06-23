@@ -66,10 +66,16 @@ document.querySelector('.btnMin').onclick = function(){
 }
 //b4
 function findMin1(a){
-    var min = a[0];
-    for(var i = 1; i < a.length; i++){
-        if(a[i] > 0 && a[i] < min)
-            min = a[i];
+    for(var i = 0; i < a.length; i++){
+        if(a[i] >= 0){
+            var min = a[i];
+            break;
+        }
+    }
+    
+    for(var j = 0; j < a.length; j++){
+        if(a[j] > 0 && a[j] < min)
+            min = a[j];
     }
     return min;
 }
